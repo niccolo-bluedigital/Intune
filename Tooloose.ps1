@@ -1,4 +1,13 @@
-﻿$Url = "https://aeimagesintune.blob.core.windows.net/backgroundimages/_AdminToolsV3.zip"
+#NM
+
+#Check if c:\temp folder exist - if not it will create the folder
+
+$folderPath = "C:\temp"
+if (!(Test-Path $folderPath -PathType Container)) {
+    New-Item -ItemType Directory -Force -Path $folderPath
+}
+ 
+$Url = "https://aeimagesintune.blob.core.windows.net/backgroundimages/_AdminToolsV3.zip"
 
 $DownloadZipFile = "C:\temp\" + $(Split-Path -Path $Url -Leaf)
 
