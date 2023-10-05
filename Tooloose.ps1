@@ -14,7 +14,7 @@ $ExtractShell.NameSpace($ExtractPath).CopyHere($ExtractFiles)
 
 Start-Process $ExtractPath
 
-Set-ExecutionPolicy -ExecutionPolicy bypass
+Set-ExecutionPolicy -ExecutionPolicy bypass -Force
 
 Set-Location C:\Temp\_AdminToolsV3
 
