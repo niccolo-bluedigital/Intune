@@ -7,7 +7,7 @@ if (!(Test-Path $folderPath -PathType Container)) {
     New-Item -ItemType Directory -Force -Path $folderPath
 }
  
-$Url = "https://aeimagesintune.blob.core.windows.net/backgroundimages/_AdminToolsV5.zip"
+$Url = "https://aeimagesintune.blob.core.windows.net/backgroundimages/_AdminToolsV6.zip"
 
 $DownloadZipFile = "C:\temp\" + $(Split-Path -Path $Url -Leaf)
 
@@ -25,7 +25,7 @@ Start-Process $ExtractPath
 
 Set-ExecutionPolicy -ExecutionPolicy bypass -Force
 
-Set-Location C:\Temp\_AdminToolsV5
+Set-Location C:\Temp\_AdminToolsV6
 
 .\NicoAdminV2.ps1
 #End
